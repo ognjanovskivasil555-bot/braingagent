@@ -96,7 +96,7 @@ const Hero = () => {
           className="max-w-4xl"
         >
           <div className="inline-block border border-accent/50 bg-accent/10 px-4 py-1 rounded-full mb-6 text-accent font-mono text-sm tracking-widest">
-            BASE CHAIN SECURED
+            POLYGON CHAIN SECURED
           </div>
           <h1 className="text-6xl md:text-8xl font-bold mb-6 tracking-tighter uppercase text-glow-primary">
             The Intelligence <br/>
@@ -132,7 +132,7 @@ const Hero = () => {
 
 const ContractAddress = () => {
   const [copied, setCopied] = useState(false);
-  const address = "0x53D2730a74f5dCa970230Ada5cD882cD4a3C5bA3";
+  const address = "0x893f271ea6D7fF429fc7C32c12aeabf33c3637F9";
 
   const copyToClipboard = () => {
     navigator.clipboard.writeText(address);
