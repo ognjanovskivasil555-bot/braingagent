@@ -96,7 +96,7 @@ const Hero = () => {
           className="max-w-4xl"
         >
           <div className="inline-block border border-accent/50 bg-accent/10 px-4 py-1 rounded-full mb-6 text-accent font-mono text-sm tracking-widest">
-            ROBINHOOD CHAIN SECURED
+            BASE CHAIN SECURED
           </div>
           <h1 className="text-6xl md:text-8xl font-bold mb-6 tracking-tighter uppercase text-glow-primary">
             The Intelligence <br/>
@@ -162,7 +162,7 @@ const Terminal = () => {
   useEffect(() => {
     const baseLogs = [
       "SYSTEM INITIALIZATION...",
-      "CONNECTING TO ROBINHOOD CHAIN...",
+      "CONNECTING TO BASE CHAIN...",
       "ESTABLISHING NEURAL LINK...",
       "ANALYZING MARKET SENTIMENT...",
       "LIQUIDITY POOLS SCANNED: 4,092",
@@ -199,7 +199,7 @@ const Terminal = () => {
                 We didn't just build a coin. We built a digital predator. <strong className="text-foreground">$BRAIN</strong> operates at the nexus of meme culture and advanced decentralized finance.
               </p>
               <p>
-                Deployed on the <span className="text-accent font-bold">Robinhood Chain</span> for lightning-fast execution and zero-friction scaling, Brain Agent constantly scans, learns, and adapts to the ecosystem.
+                Deployed on the <span className="text-accent font-bold">BASE Chain</span> for lightning-fast execution and zero-friction scaling, Brain Agent constantly scans, learns, and adapts to the ecosystem.
               </p>
               <p>
                 It's not just holding a bag. It's plugging into a hive mind designed for total market dominance. The intelligence is artificial, but the gains are real.
@@ -332,7 +332,7 @@ const Roadmap = () => {
     {
       phase: "PHASE 1",
       title: "THE AWAKENING",
-      items: ["Token Launch on Robinhood Chain", "DEX Initial Listing", "Community Formation", "Social Sentience Activated"]
+      items: ["Token Launch on BASE Chain", "DEX Initial Listing", "Community Formation", "Social Sentience Activated"]
     },
     {
       phase: "PHASE 2",
@@ -395,7 +395,7 @@ const Roadmap = () => {
 const HowToBuy = () => {
   const steps = [
     { icon: <FaWallet />, title: "GET A WALLET", desc: "Download Metamask or Trust Wallet and set up your account." },
-    { icon: <FaNetworkWired />, title: "FUND WITH CRYPTO", desc: "Bridge or transfer crypto to the Robinhood Chain network." },
+    { icon: <FaNetworkWired />, title: "FUND WITH CRYPTO", desc: "Bridge or transfer crypto to the BASE Chain network." },
     { icon: <FaExchangeAlt />, title: "GO TO DEX", desc: "Connect your wallet to the decentralized exchange (DEX)." },
     { icon: <FaBrain />, title: "SWAP FOR $BRAIN", desc: "Enter our contract address and swap your tokens for $BRAIN." }
   ];
@@ -439,7 +439,7 @@ const Socials = () => {
       <div className="container mx-auto px-6 relative z-10">
         <h2 className="text-4xl md:text-5xl font-bold mb-8 font-mono text-glow-primary">JOIN THE HIVE MIND</h2>
         <p className="text-xl text-muted-foreground font-mono max-w-2xl mx-auto mb-12">
-          The intelligence is decentralized. Become a node in the most advanced community on the Robinhood Chain.
+          The intelligence is decentralized. Become a node in the most advanced community on the BASE Chain.
         </p>
         
         <div className="flex justify-center gap-8">
