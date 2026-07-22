@@ -132,7 +132,7 @@ const Hero = () => {
 
 const ContractAddress = () => {
   const [copied, setCopied] = useState(false);
-  const address = "0x075e3bD7E12023bD23C55E812A495cac14ddCba3";
+  const address = "0x53D2730a74f5dCa970230Ada5cD882cD4a3C5bA3";
 
   const copyToClipboard = () => {
     navigator.clipboard.writeText(address);
