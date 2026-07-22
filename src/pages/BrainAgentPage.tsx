@@ -132,7 +132,7 @@ const Hero = () => {
 
 const ContractAddress = () => {
   const [copied, setCopied] = useState(false);
-  const address = "CA: 0x72036C742671603c90bF53f007068DA72578Aba3";
+  const address = "0x72036C742671603c90bF53f007068DA72578Aba3";
 
   const copyToClipboard = () => {
     navigator.clipboard.writeText(address);
@@ -240,10 +240,12 @@ const Terminal = () => {
 
 const Tokenomics = () => {
   const data = [
-    { name: 'Liquidity', value: 50, color: 'hsl(var(--chart-1))' },
-    { name: 'Community & Rewards', value: 25, color: 'hsl(var(--chart-2))' },
-    { name: 'Development', value: 15, color: 'hsl(var(--chart-3))' },
-    { name: 'Marketing', value: 10, color: 'hsl(var(--chart-4))' },
+    { name: 'Liquidity Pool', value: 100, color: 'hsl(var(--chart-1))' },
+  ];
+
+  const fees = [
+    { label: 'Marketing', color: 'hsl(var(--chart-2))' },
+    { label: 'Community Rewards', color: 'hsl(var(--chart-3))' },
   ];
 
   return (
@@ -282,22 +284,42 @@ const Tokenomics = () => {
           </div>
 
           <div className="space-y-6">
-            {data.map((item, index) => (
-              <motion.div 
-                key={item.name}
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="flex items-center justify-between p-4 border border-primary/20 bg-background rounded hover:border-primary hover:box-glow-primary transition-all group"
-              >
-                <div className="flex items-center gap-4">
-                  <div className="w-4 h-4 rounded-sm" style={{ backgroundColor: item.color }}></div>
-                  <span className="font-mono text-lg font-bold">{item.name}</span>
+            {/* Liquidity allocation */}
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="flex items-center justify-between p-4 border border-primary/20 bg-background rounded hover:border-primary hover:box-glow-primary transition-all"
+            >
+              <div className="flex items-center gap-4">
+                <div className="w-4 h-4 rounded-sm" style={{ backgroundColor: 'hsl(var(--chart-1))' }}></div>
+                <div>
+                  <span className="font-mono text-lg font-bold block">Liquidity Pool</span>
+                  <span className="font-mono text-xs text-muted-foreground">100% in pool — no dev/team allocation</span>
                 </div>
-                <span className="font-mono text-2xl text-accent">{item.value}%</span>
-              </motion.div>
-            ))}
+              </div>
+              <span className="font-mono text-2xl text-accent">100%</span>
+            </motion.div>
+
+            {/* Creator fees */}
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.15 }}
+              className="p-4 border border-accent/30 bg-background rounded"
+            >
+              <p className="font-mono text-sm text-accent tracking-widest mb-3">CREATOR FEES</p>
+              <div className="space-y-2">
+                {fees.map((f) => (
+                  <div key={f.label} className="flex items-center gap-3">
+                    <div className="w-3 h-3 rounded-sm" style={{ backgroundColor: f.color }}></div>
+                    <span className="font-mono text-base font-bold">{f.label}</span>
+                  </div>
+                ))}
+              </div>
+              <p className="font-mono text-xs text-muted-foreground mt-3">Trading fees flow directly into marketing campaigns and community reward programs.</p>
+            </motion.div>
           </div>
         </div>
       </div>
